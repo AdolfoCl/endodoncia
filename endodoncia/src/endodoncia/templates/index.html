@@ -1,0 +1,238 @@
+{% extends "base.html" %}
+{% block content %}
+  <!-- Hero Section with Background -->
+  <section class="hero-modern">
+    <div class="hero-background"></div>
+    <div class="hero-content-wrapper">
+      <div class="hero-main">
+        <div class="hero-text">
+          <h1 class="fade-in-up">{{ hero_title }}</h1>
+          <p class="hero-subtitle fade-in-up animate-delay-200">{{ hero_subtitle }}</p>
+          <div class="hero-cta fade-in-up animate-delay-400">
+            <a class="btn-modern primary-btn" href="#" data-modal="appointment">{{ cta_appointment }}</a>
+            <a class="btn-modern secondary-btn" href="#que-es">Conoce el Procedimiento</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-sidebar">
+        <div class="contact-card fade-in-right animate-delay-300">
+          <h3>Reserva tu Consulta</h3>
+          <form class="hero-form">
+            <input type="text" placeholder="Nombre completo" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Teléfono" required>
+            <textarea placeholder="Describe tu situación" rows="3"></textarea>
+            <button type="submit" class="btn-modern form-btn">Solicitar Consulta</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Is Root Canal Section -->
+  <section class="content-section what-is" id="que-es">
+    <div class="container">
+      <div class="content-layout">
+        <div class="content-main">
+          <div class="section-header">
+            <img src="/assets/root-canal-illustration.svg" alt="Tratamiento de Conductos" class="section-image fade-in-left">
+            <p class="intro-text fade-in-up animate-delay-200">
+              Entendemos que la idea de un <strong class="tooltip">tratamiento de conductos
+                <span class="tooltip-content">Procedimiento para salvar dientes infectados o dañados</span>
+              </strong> puede generar algo de aprensión. 
+              Sin embargo, estamos aquí para asegurarle que con nuestra experiencia y técnicas avanzadas, 
+              su experiencia de tratamiento de conductos será cómoda y efectiva.
+            </p>
+          </div>
+
+          <h2 class="fade-in-up">¿Qué es el Tratamiento de Conductos?</h2>
+          <div class="content-box fade-in-up animate-delay-100">
+            <p>El tratamiento de conductos, también conocido como terapia endodóntica, es un procedimiento diseñado 
+            para salvar un diente severamente infectado o dañado. Contrario a los conceptos erróneos comunes, 
+            los tratamientos de conductos no son procedimientos dolorosos; alivian el dolor causado por la pulpa 
+            dental infectada o inflamada.</p>
+          </div>
+
+          <h3 class="fade-in-up">¿Por qué Elegir Nuestra Clínica para su Tratamiento de Conductos?</h3>
+          
+          <div class="benefits-grid">
+            <div class="benefit-card scale-in">
+              <div class="benefit-number">1</div>
+              <div class="benefit-content">
+                <h4>Experiencia</h4>
+                <p>Nuestro equipo de endodoncistas se especializa en endodoncia microquirúrgica, 
+                asegurando precisión y efectividad en cada procedimiento.</p>
+              </div>
+            </div>
+            
+            <div class="benefit-card scale-in animate-delay-100">
+              <div class="benefit-number">2</div>
+              <div class="benefit-content">
+                <h4>Tecnología Avanzada</h4>
+                <p>Utilizamos equipos y técnicas de vanguardia, incluyendo microscopios operatorios 
+                dentales e instrumentación ultrasónica, para asegurar la más alta calidad de atención.</p>
+              </div>
+            </div>
+            
+            <div class="benefit-card scale-in animate-delay-200">
+              <div class="benefit-number">3</div>
+              <div class="benefit-content">
+                <h4>Comodidad del Paciente</h4>
+                <p>Su comodidad es nuestra prioridad. Ofrecemos opciones de sedación para ayudarle 
+                a relajarse durante el procedimiento, y nuestro equipo compasivo le guiará a través 
+                de cada paso del proceso.</p>
+              </div>
+            </div>
+            
+            <div class="benefit-card scale-in animate-delay-300">
+              <div class="benefit-number">4</div>
+              <div class="benefit-content">
+                <h4>Éxito a Largo Plazo</h4>
+                <p>Nuestro objetivo es preservar su diente natural el mayor tiempo posible. 
+                Con atención meticulosa al detalle y planificación exhaustiva del tratamiento, 
+                buscamos lograr el éxito a largo plazo para su terapia de conductos.</p>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="fade-in-up">Qué Esperar Durante su Procedimiento de Tratamiento de Conductos</h2>
+          
+          <div class="process-steps">
+            <div class="step-item fade-in-left">
+              <h4>Consulta Inicial</h4>
+              <p>Durante su primera visita, uno de nuestros endodoncistas experimentados examinará 
+              su diente y discutirá sus opciones de tratamiento. Abordaremos cualquier preocupación 
+              que pueda tener y nos aseguraremos de que se sienta informado y confiado para continuar.</p>
+            </div>
+            
+            <div class="step-item fade-in-left animate-delay-100">
+              <h4>Tratamiento</h4>
+              <p>El procedimiento de conducto típicamente implica remover la pulpa infectada o dañada 
+              del interior del diente, limpiar y desinfectar el sistema de conductos radiculares, 
+              y sellarlo para prevenir infección futura. Con nuestro enfoque microquirúrgico, 
+              podemos lograr precisión y éxito sin precedentes.</p>
+            </div>
+            
+            <div class="step-item fade-in-left animate-delay-200">
+              <h4>Cuidado de Seguimiento</h4>
+              <p>Después de su tratamiento de conductos, proporcionaremos instrucciones para 
+              el cuidado post-procedimiento para promover la sanación y asegurar resultados óptimos. 
+              También programaremos citas de seguimiento para monitorear su progreso y abordar 
+              cualquier preocupación.</p>
+            </div>
+          </div>
+
+          <div class="cta-section fade-in-up">
+            <h3>No Postergue el Tratamiento de Conductos para Mejor Salud Oral</h3>
+            <p>No espere para buscar tratamiento. Retrasar la atención puede llevar a complicaciones 
+            adicionales y potencialmente la pérdida de su diente. En nuestra clínica, estamos 
+            dedicados a preservar su sonrisa natural y restaurar su salud oral.</p>
+            <a href="#" class="btn-modern cta-btn" data-modal="appointment">Programe su Consulta Hoy</a>
+          </div>
+        </div>
+        
+        <div class="content-sidebar">
+          <div class="sidebar-card fade-in-right">
+            <h3>Información de Contacto</h3>
+            <div class="contact-info">
+              <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div>
+                  <p>{{ site_address }}</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div>
+                  <a href="{{ site_phone_link }}" class="phone-contact">{{ site_phone }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="sidebar-card fade-in-right animate-delay-200">
+            <h3>Horarios de Atención</h3>
+            <div class="hours-info">
+              <p><strong>Lunes a Viernes:</strong><br>8:30 AM - 7:30 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview -->
+  <section class="services-preview">
+    <div class="container">
+      <h2 class="fade-in-up">Nuestros Servicios Especializados</h2>
+      <div class="services-grid">
+        {% for svc in services %}
+        <div class="service-card scale-in animate-delay-{{ loop.index * 100 }}">
+          <h3>{{ svc.title }}</h3>
+          <p>Tratamiento especializado con la más alta calidad y tecnología avanzada.</p>
+          <a href="/{{ svc.slug }}/" class="service-link">Conocer más →</a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Specialist Section -->
+  <section class="specialist-section">
+    <div class="container">
+      <div class="specialist-content">
+        <div class="specialist-info fade-in-up">
+          <h2>{{ specialist_name }}</h2>
+          <p class="specialist-title">{{ specialist_title }}</p>
+          <p class="specialist-bio">{{ specialist_bio }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location Section -->
+  <section class="location-section">
+    <div class="container">
+      <div class="location-content">
+        <div class="location-info fade-in-up">
+          <h2>Nuestra Ubicación</h2>
+          <p class="location-description">Nos encontramos en Las Condes, con fácil acceso y estacionamiento disponible.</p>
+          <div class="location-details">
+            <div class="location-item">
+              <span class="location-icon">📍</span>
+              <div class="location-text">
+                <strong>Dirección</strong>
+                <p>Av. Las Condes 10465 oficina 116, Las Condes</p>
+              </div>
+            </div>
+            <div class="location-item">
+              <span class="location-icon">📞</span>
+              <div class="location-text">
+                <strong>Teléfono</strong>
+                <p><a href="tel:+56941603277">+56 9 4160 3277</a></p>
+              </div>
+            </div>
+            <div class="location-item">
+              <span class="location-icon">🕒</span>
+              <div class="location-text">
+                <strong>Horarios</strong>
+                <p>Lunes a Viernes: 8:30 AM - 7:30 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="location-map fade-in-right animate-delay-200">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.8676544887396!2d-70.58191252480315!3d-33.40804949457462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf6bd5b5f2ed%3A0x879c5b8e2b15e4f2!2sAv.%20Las%20Condes%2010465%2C%20Las%20Condes%2C%20Regi%C3%B3n%20Metropolitana%2C%20Chile!5e0!3m2!1sen!2sus!4v1731961200000!5m2!1sen!2sus"
+            width="100%" 
+            height="400" 
+            style="border:0;border-radius:8px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

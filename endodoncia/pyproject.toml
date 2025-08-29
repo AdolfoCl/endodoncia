@@ -1,0 +1,22 @@
+[project]
+name = "endodoncia"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "AdolfoCl", email = "adolfo.diaz@ies.cl" }
+]
+requires-python = ">=3.9"
+dependencies = [
+    "boto3>=1.40.19",
+    "jinja2>=3.1.6",
+    "typer>=0.16.1",
+]
+
+[project.scripts]
+endodoncia = "endodoncia:main"
+build-site = "endodoncia.build:build"
+deploy-site = "endodoncia.deploy:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

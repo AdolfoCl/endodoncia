@@ -1,0 +1,40 @@
+<svg width="300" height="400" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Tooth outline -->
+  <path d="M150 50 C120 50, 100 70, 100 100 L100 200 C100 250, 120 300, 150 350 C180 300, 200 250, 200 200 L200 100 C200 70, 180 50, 150 50" 
+        fill="#f8f9fa" stroke="#2563eb" stroke-width="3"/>
+  
+  <!-- Crown -->
+  <path d="M150 50 C120 50, 100 70, 100 100 L100 150 L200 150 L200 100 C200 70, 180 50, 150 50" 
+        fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  
+  <!-- Pulp chamber -->
+  <ellipse cx="150" cy="120" rx="25" ry="20" fill="#ef4444" stroke="#dc2626" stroke-width="1"/>
+  
+  <!-- Root canals -->
+  <line x1="150" y1="140" x2="150" y2="320" stroke="#ef4444" stroke-width="6" stroke-linecap="round"/>
+  <line x1="135" y1="140" x2="135" y2="300" stroke="#ef4444" stroke-width="4" stroke-linecap="round"/>
+  <line x1="165" y1="140" x2="165" y2="300" stroke="#ef4444" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Root tips -->
+  <circle cx="150" cy="320" r="4" fill="#dc2626"/>
+  <circle cx="135" cy="300" r="3" fill="#dc2626"/>
+  <circle cx="165" cy="300" r="3" fill="#dc2626"/>
+  
+  <!-- Labels -->
+  <text x="230" y="80" font-family="Arial" font-size="12" fill="#1f2937">Corona</text>
+  <line x1="220" y1="75" x2="180" y2="90" stroke="#6b7280" stroke-width="1"/>
+  
+  <text x="230" y="130" font-family="Arial" font-size="12" fill="#1f2937">Pulpa</text>
+  <line x1="220" y1="125" x2="175" y2="120" stroke="#6b7280" stroke-width="1"/>
+  
+  <text x="230" y="180" font-family="Arial" font-size="12" fill="#1f2937">Conductos</text>
+  <line x1="220" y1="175" x2="170" y2="180" stroke="#6b7280" stroke-width="1"/>
+  
+  <text x="230" y="250" font-family="Arial" font-size="12" fill="#1f2937">Raíces</text>
+  <line x1="220" y1="245" x2="170" y2="250" stroke="#6b7280" stroke-width="1"/>
+  
+  <!-- Title -->
+  <text x="150" y="30" font-family="Arial" font-size="16" font-weight="bold" fill="#1f2937" text-anchor="middle">
+    Anatomía Dental
+  </text>
+</svg>

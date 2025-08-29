@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+  <section class="hero">
+    <h1>{{ hero_title }}</h1>
+    <p>{{ hero_subtitle }}</p>
+    <div class="cta">
+      <a class="btn" href="#">{{ cta_referral }}</a>
+      <a class="btn primary" href="#">{{ cta_appointment }}</a>
+    </div>
+  </section>
+
+  <section class="specialist">
+    <h2>{{ specialist_name }}</h2>
+    <p class="muted">{{ specialist_title }}</p>
+    <p>{{ specialist_bio }}</p>
+  </section>
+
+  <section class="services">
+    <h2>Explora Nuestros Servicios</h2>
+    <ul>
+      {% for svc in services %}
+      <li><a href="/{{ svc.slug }}/">{{ svc.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endblock %}
+
+

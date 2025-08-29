@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+{% block content %}
+  <section class="page-header">
+    <div class="hero-content">
+      <h1>Solicitar Consulta</h1>
+      <p>Completa este formulario y nos pondremos en contacto contigo para programar tu consulta especializada.</p>
+    </div>
+  </section>
+
+  <section class="contact-form-section">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Información de Contacto</h2>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <h3>Teléfono</h3>
+            <p><a href="{{ site_phone_link }}" class="phone-link">{{ site_phone }}</a></p>
+            <p class="contact-note">Atención de emergencias 24/7</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <h3>Dirección</h3>
+            <p>{{ site_address }}</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">⏰</div>
+          <div>
+            <h3>Horarios</h3>
+            <p>Lunes a viernes de 8:30 a 19:30</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-container">
+        <form class="contact-form" action="#" method="post" id="contactForm">
+          <div class="form-header">
+            <h2>Solicitar Consulta</h2>
+            <p>Los campos marcados con * son obligatorios</p>
+          </div>
+
+          <div class="form-group">
+            <label for="name">Nombre Completo *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Correo Electrónico *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Teléfono *</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="service">Tipo de Tratamiento</label>
+            <select id="service" name="service">
+              <option value="">Selecciona un tratamiento</option>
+              <option value="root-canal">Tratamiento de Conductos</option>
+              <option value="retreatment">Retratamiento de Conductos</option>
+              <option value="microsurgery">Microcirugía Endodóntica</option>
+              <option value="trauma">Trauma Dental</option>
+              <option value="bleaching">Blanqueamiento Interno</option>
+              <option value="consultation">Consulta General</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="urgency">Urgencia</label>
+            <select id="urgency" name="urgency">
+              <option value="routine">Consulta de rutina</option>
+              <option value="soon">Prefiero cita pronto</option>
+              <option value="urgent">Urgente - dolor o molestia</option>
+              <option value="emergency">Emergencia - dolor severo</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="symptoms">Describe tus síntomas o consulta</label>
+            <textarea id="symptoms" name="symptoms" rows="5" placeholder="Por favor describe tu situación, síntomas, o cualquier pregunta que tengas..."></textarea>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="insurance" name="insurance">
+              <span class="checkmark"></span>
+              Tengo seguro dental
+            </label>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="referral" name="referral">
+              <span class="checkmark"></span>
+              Fui referido por otro dentista
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary large form-submit">
+              📧 Enviar Solicitud
+            </button>
+            <p class="form-note">
+              Te contactaremos dentro de 24 horas para confirmar tu cita. 
+              Para emergencias, llama directamente al <a href="{{ site_phone_link }}">{{ site_phone }}</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust-section">
+    <div class="trust-content">
+      <h2>¿Por qué elegir nuestra clínica?</h2>
+      <div class="trust-features">
+        <div class="trust-feature">
+          <span class="feature-icon">🏆</span>
+          <h3>Especialistas Certificados</h3>
+          <p>Equipo con especialización en endodoncia y años de experiencia</p>
+        </div>
+        <div class="trust-feature">
+          <span class="feature-icon">🔬</span>
+          <h3>Tecnología Avanzada</h3>
+          <p>Microscopios operatorios e instrumentación de última generación</p>
+        </div>
+        <div class="trust-feature">
+          <span class="feature-icon">💎</span>
+          <h3>Atención Personalizada</h3>
+          <p>Cada paciente recibe un plan de tratamiento individualizado</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Simple form validation and submission simulation
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData.entries());
+      
+      // Show success message
+      const submitBtn = document.querySelector('.form-submit');
+      const originalText = submitBtn.innerHTML;
+      
+      submitBtn.innerHTML = '✅ Solicitud Enviada';
+      submitBtn.disabled = true;
+      submitBtn.style.background = '#16a34a';
+      
+      // Show contact message
+      setTimeout(() => {
+        alert('¡Gracias por tu solicitud! Te contactaremos dentro de 24 horas para confirmar tu cita.\n\nPara emergencias, no dudes en llamar directamente al {{ site_phone }}.');
+      }, 500);
+      
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        this.reset();
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        submitBtn.style.background = '';
+      }, 3000);
+    });
+  </script>
+{% endblock %}
